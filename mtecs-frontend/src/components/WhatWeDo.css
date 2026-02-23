@@ -1,0 +1,160 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+/* HEADING */
+.wheadding{
+  margin:50px auto;
+  max-width:1200px;
+  padding:0 20px;
+}
+
+.wheadding h2{
+  color:#3b2416;
+  font-size:clamp(1.8rem,4vw,3rem);
+  line-height:1.2;
+}
+
+.wheadding span{
+  color:rgba(59,36,22,.75);
+  font-size:clamp(.9rem,1.2vw,1.05rem);
+  display:block;
+  margin-top:10px;
+  line-height:1.6;
+}
+
+/* SECTION */
+.wwd-section{
+  display:flex;
+  height:450px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.wwd-left,
+.wwd-right{
+  width:50%;
+}
+
+/* CARD */
+.wwd-card{
+  position:relative;
+  overflow:hidden;
+  height:100%;
+  border:2px solid white;
+  background:#eee;
+}
+
+/* IMAGE LOADING EFFECT */
+.wwd-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:blur(12px);
+  transform:scale(1.05);
+  transition:all .6s ease;
+}
+
+.wwd-card img.loaded{
+  filter:blur(0);
+  transform:scale(1);
+}
+
+/* OVERLAY */
+.wwd-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.2));
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:25px;
+  transform:translateY(100%);
+  transition:.45s ease;
+}
+
+.wwd-card:hover .wwd-overlay{
+  transform:translateY(0);
+}
+
+/* TEXT */
+.wwd-overlay h3{
+  font-size:clamp(1rem,1.5vw,1.3rem);
+  margin-bottom:8px;
+  position:absolute;
+  top:-70px;
+  left:0;
+  padding:6px 12px;
+  background:rgba(0,0,0,.65);
+  width:100%;
+  transition:.3s ease;
+}
+
+.wwd-card:hover h3{
+  top:20px;
+}
+
+.wwd-overlay p{
+  font-size:clamp(.8rem,1.1vw,.95rem);
+  opacity:.9;
+  position:absolute;
+  top:55%;
+  line-height:1.4;
+}
+
+/* ZOOM */
+.wwd-card:hover img{
+  transform:scale(1.08);
+}
+
+/* GRID */
+.wwd-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  height:100%;
+}
+
+/* TABLET */
+@media(max-width:900px){
+
+  .wwd-section{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .wwd-left,
+  .wwd-right{
+    width:100%;
+  }
+
+  .wwd-card{
+    height:260px;
+  }
+
+  .wwd-grid{
+    height:auto;
+  }
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .wheadding{
+    text-align:center;
+  }
+
+  /* .wwd-overlay h3{
+    top:10px;
+    font-size:1rem;
+  } */
+
+  .wwd-overlay p{
+    position:static;
+    margin-top:40px;
+  }
+
+}

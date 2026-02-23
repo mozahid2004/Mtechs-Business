@@ -1,0 +1,33 @@
+# ENV
+.env
+.env.*
+
+# Dependencies
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Build
+dist
+build
+.cache
+coverage
+
+# Temp
+.tmp
+*.pid
+*.seed
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode
+.idea
+*.swp

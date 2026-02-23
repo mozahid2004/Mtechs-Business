@@ -1,0 +1,434 @@
+/* =========================================================
+   GLOBAL THEME
+========================================================= */
+:root {
+  --primary: #31326F;
+  --secondary: #3572EF;
+  --accent: #3BC1A8;
+  --white: #ffffff;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* video */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(103, 104, 169, 0.15);
+  z-index: 1;
+}
+
+/* content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 20px 20px 20px 10%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.267);
+}
+
+.hero-content h1 {
+  font-size: clamp(2.2rem, 3vw, 4rem);
+  line-height: 1.15;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: .92;
+  line-height: 1.7;
+}
+
+/* link */
+.hero-how {
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  transition: .25s;
+}
+
+.hero-how:hover {
+  color: var(--primary);
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+/* base */
+.hero-actions a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 250px;
+  padding: 13px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+  backdrop-filter: blur(6px);
+  transition: .35s cubic-bezier(.17, .67, .3, 1.33);
+}
+
+/* shine */
+.hero-actions a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, .35),
+      transparent);
+  transform: translateX(-120%) skewX(-15deg);
+  transition: .6s;
+  z-index: -1;
+}
+
+.hero-actions a:hover::before {
+  transform: translateX(120%) skewX(-15deg);
+}
+
+/* icon anim */
+.hero-actions a svg {
+  font-size: 1.25rem;
+  transition: .35s;
+}
+
+.hero-actions a:hover svg {
+  transform: translateX(4px) scale(1.15);
+}
+
+/* primary */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  box-shadow:
+    0 8px 20px rgba(49, 50, 111, .35),
+    inset 0 1px 0 rgba(255, 255, 255, .25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow:
+    0 18px 45px rgba(49, 50, 111, .55),
+    0 0 25px rgba(53, 114, 239, .45);
+}
+
+/* outline */
+.btn-outline {
+  color: var(--primary);
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, var(--primary), var(--secondary)) border-box;
+  box-shadow: 0 10px 25px rgba(49, 50, 111, .15);
+}
+
+.btn-outline:hover {
+  color: #fff;
+  transform: translateY(-4px) scale(1.02);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow:
+    0 18px 45px rgba(49, 50, 111, .55),
+    0 0 20px rgba(53, 114, 239, .45);
+}
+
+
+/* =========================================================
+   WHAT WE DO
+========================================================= */
+.what-we-do {
+  background: #fff;
+  margin-top: 40px;
+}
+
+.what-we-do-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+  text-align: center;
+}
+
+/* grid */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+/* card */
+.work-card {
+  position: relative;
+  height: 360px;
+  background: rgba(53, 114, 239, .12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(53, 114, 239, .25);
+  transition: .35s;
+  box-shadow: 0 12px 28px rgba(49, 50, 111, .12);
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(49, 50, 111, .18);
+}
+
+/* circle */
+.circle-img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  z-index: 10;
+  border: 4px solid rgba(59, 193, 168, .65);
+}
+
+.circle-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* title */
+.service-name {
+  color: var(--primary);
+  position: absolute;
+  bottom: 24px;
+  z-index: 12;
+  transition: .3s;
+}
+
+/* overlay */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(49, 50, 111, .88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: .45s;
+}
+
+.work-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.work-card:hover .service-name {
+  color: #fff;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media(max-width:480px) {
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions a {
+    width: 100%;
+  }
+
+  .hero-content {
+    padding: 5%;
+  }
+
+  .hero-overlay {
+    background: rgba(0, 0, 0, .59);
+  }
+}
+/* ========================= */
+
+/* ================= SCALE UP STRIPS ================= */
+.scale-up-section {
+  padding: 80px 20px;
+  background: #fdfaf7;
+  color: #3b2416;
+}
+
+.scale-up-container {
+  display: flex;
+  /* gap: 40px; */
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: flex-start;
+  flex-wrap: wrap; 
+}
+
+/* Right-side header */
+.scale-up-header {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.scale-up-header h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.scale-up-header h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: rgb(222, 89, 89);
+  margin: 10px 0;
+  /* border-radius: 2px; */
+}
+
+.scale-up-header p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #5a4a3c;
+}
+
+/* Left-side strips */
+.left-scale {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+}
+
+/* Each strip */
+.scale-strip {
+  position: relative;
+  width: 80%;
+  height: 120px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  margin: auto;
+}
+
+/* Image fills strip */
+.scale-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Overlay for quote + description */
+.strip-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(59,36,22,0.8), rgba(59,36,22,0));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  transition: background 0.5s ease;
+}
+
+.strip-overlay h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Description hidden initially */
+.strip-overlay p {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 10px;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Hover: expand visually without pushing layout */
+.scale-strip:hover {
+  transform: scaleY(1.2); /* stretch vertically slightly */
+  z-index: 2;
+}
+
+.scale-strip:hover img {
+  transform: scale(1.05);
+}
+
+.scale-strip:hover .strip-overlay {
+  background: linear-gradient(to top, rgba(59,36,22,0.85), rgba(59,36,22,0.3));
+}
+
+.scale-strip:hover .strip-overlay p {
+  max-height: 200px;
+  opacity: 1;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 900px) {
+  .scale-up-container {
+    flex-direction: column;
+  }
+
+  .left-scale {
+    order: 2;
+  }
+
+  .scale-up-header {
+    order: 1;
+    text-align: center;
+   
+  }
+
+  .scale-up-header h2::after {
+    margin: 10px auto 0;
+  }
+
+  .scale-strip {
+    height: 180px;
+    width: 100%;
+  }
+}

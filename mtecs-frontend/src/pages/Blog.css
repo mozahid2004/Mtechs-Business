@@ -1,0 +1,166 @@
+/* ======================
+   BLOG SECTION
+====================== */
+.blog-section {
+  padding: 80px 20px;
+  /* max-width: 1400px; */
+  margin: 50px auto;
+  color: #3b2416;
+}
+
+/* HEADER */
+.blog-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.blog-header h2 {
+  font-size: 2.5rem;
+}
+
+.sub {
+  color: #7a5a44;
+}
+
+/* ======================
+   LAYOUT
+====================== */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 40px;
+}
+
+/* ======================
+   LEFT LIST
+====================== */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding: 10px;
+  position: sticky;
+  top: 100px;
+}
+
+/* ======================
+   CARD
+====================== */
+.blog-card {
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid #f0c9a4;
+  background: white;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.blog-card:hover,
+.blog-card.active {
+  border-color: #e67e22;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(230,126,34,0.25);
+}
+
+.blog-card h4 {
+  margin: 8px 0;
+}
+
+.blog-card p {
+  font-size: .9rem;
+  color: #7a5a44;
+}
+
+/* ======================
+   META
+====================== */
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8rem;
+  margin-bottom: 8px;
+}
+
+.niche {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #7a5a44;
+}
+
+.date {
+  color: #7a5a44;
+}
+
+/* ======================
+   LINK
+====================== */
+.open-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #e67e22;
+  transition: .25s;
+}
+
+.open-link:hover {
+  color: #d35400;
+}
+
+/* ======================
+   RIGHT FULL BLOG
+====================== */
+.blog-full img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.blog-full h2 {
+  margin-bottom: 15px;
+}
+
+.blog-full p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.blog-full ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.blog-full li {
+  margin-bottom: 8px;
+}
+
+/* ======================
+   SCROLLBAR
+====================== */
+.blog-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.blog-list::-webkit-scrollbar-thumb {
+  background: #e67e22;
+  border-radius: 10px;
+}
+
+/* ======================
+   MOBILE
+====================== */
+@media (max-width: 900px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-list {
+    position: relative;
+    top: 0;
+    max-height: none;
+  }
+}

@@ -1,0 +1,120 @@
+.career-section {
+  padding: 80px 20px;
+  background: #f9f5f2;
+  color: #3b2416;
+  margin-top: 50px;
+}
+
+.career-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* LEFT INFO */
+.career-left h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #3b2416;
+}
+
+.career-left p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #503c3c;
+  margin-bottom: 30px;
+}
+
+/* Contact buttons */
+.career-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.contact-btn.whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.contact-btn.whatsapp:hover {
+  background: #1ebe5b;
+}
+
+.contact-btn.email {
+  background: #a46a3f;
+  color: white;
+}
+
+.contact-btn.email:hover {
+  background: #8b562f;
+}
+
+/* POLICY / ABOUT SECTION */
+.career-policy {
+  background: #fff7f2;
+  padding: 50px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.career-policy h3 {
+  font-size: 2rem;
+  color: #3b2416;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.career-policy p {
+  font-size: 1rem;
+  color: #503c3c;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+.quote-icon {
+  font-size: 32px;
+  color: #a46a3f;
+  position: absolute;
+}
+
+.quote-icon.left {
+  top: 20px;
+  left: 20px;
+}
+
+.quote-icon.right {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .career-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .career-policy {
+    padding: 30px 20px;
+  }
+
+  .quote-icon {
+    font-size: 24px;
+  }
+}

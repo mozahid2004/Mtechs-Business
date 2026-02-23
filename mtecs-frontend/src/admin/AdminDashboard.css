@@ -1,0 +1,181 @@
+/* page */
+.dashboard-container{
+  padding:40px;
+  background:#f7f8fc;
+  min-height:100vh;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+
+/* header */
+.dashboard-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:35px;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.dashboard-title{
+  font-size:30px;
+  font-weight:700;
+  color:#2d2d2d;
+}
+
+/* logout */
+.logout-btn{
+  background:#3b2416;
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.logout-btn:hover{
+  background:#a46a3f;
+  transform:translateY(-2px);
+}
+
+/* grid */
+.leads-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+}
+
+/* card */
+.lead-card{
+  background:white;
+  border-radius:16px;
+  padding:24px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:.25s;
+}
+
+.lead-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* row layout */
+.lead-row{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  margin:7px 0;
+  align-items:start;
+}
+
+/* label */
+.lead-row span{
+  font-weight:600;
+  color:#444;
+  position:relative;
+}
+
+.lead-row span::after{
+  content:":";
+  position:absolute;
+  right:12px;
+}
+
+/* value */
+.lead-row p{
+  margin:0;
+  color:#555;
+  word-break:break-word;
+}
+
+/* message */
+.message-row p{
+  background:#f3f6fb;
+  padding:12px;
+  border-radius:8px;
+  line-height:1.5;
+}
+
+/* status */
+.status{
+  margin-top:15px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.status span{
+  margin-left:10px;
+  padding:4px 12px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+/* colors */
+.status-contacted{
+  background:#e6f7ee;
+  color:#1a7f4b;
+}
+
+.status-new{
+  background:#fff4e5;
+  color:#b76a00;
+}
+
+/* buttons */
+.btn-group{
+  display:flex;
+  gap:10px;
+  margin-top:18px;
+}
+
+.btn{
+  flex:1;
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.btn-contact{
+  background:#3b2416;
+  color:white;
+}
+
+.btn-contact:hover{
+  background:#a46a3f;
+}
+
+.btn-delete{
+  background:#ff4d4d;
+  color:white;
+}
+
+.btn-delete:hover{
+  background:#d93636;
+}
+
+/* responsive */
+@media(max-width:480px){
+
+  .dashboard-container{
+    padding:25px 15px;
+  }
+
+  .dashboard-title{
+    font-size:24px;
+  }
+
+  .lead-row{
+    grid-template-columns:1fr;
+  }
+
+  .lead-row span::after{
+    display:none;
+  }
+
+  .lead-row span{
+    margin-bottom:2px;
+  }
+}

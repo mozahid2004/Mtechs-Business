@@ -1,0 +1,175 @@
+/* =========================
+   SECTION
+========================= */
+.portfolio-section{
+  padding:90px 20px;
+  text-align:center;
+  background:#f8f5f2;
+  font-family:system-ui;
+}
+
+/* =========================
+   HEADER
+========================= */
+.portfolio-header{
+  max-width:700px;
+  margin:auto;
+  margin-bottom:50px;
+}
+
+.portfolio-header h2{
+  font-size:2.4rem;
+  margin-bottom:12px;
+  color:#3b2416;
+}
+
+.portfolio-header p{
+  color:#7a5a46;
+  line-height:1.6;
+}
+
+/* =========================
+   SLIDER AREA
+========================= */
+.slider-area{
+  position:relative;
+  width:100%;
+  max-width:1000px;
+  margin:auto;
+}
+
+.portfolio-swiper{
+  padding:50px 0;
+}
+
+/* =========================
+   CARD
+========================= */
+.portfolio-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  transition:.5s;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.portfolio-card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:22px;
+}
+
+.card-content h3{
+  margin-bottom:10px;
+  font-size:1.2rem;
+  color:#3b2416;
+}
+
+.card-content p{
+  font-size:.95rem;
+  color:#8a6a55;
+  margin-bottom:18px;
+}
+
+/* BUTTON */
+.card-btn{
+  padding:10px 20px;
+  border-radius:30px;
+  background:#3b2416;
+  color:#fff;
+  text-decoration:none;
+  font-size:.85rem;
+  transition:.3s;
+}
+
+.card-btn:hover{
+  background:#a46a3f;
+}
+
+/* =========================
+   SCALE EFFECT
+========================= */
+.portfolio-swiper .swiper-slide{
+  transition:transform .6s ease, opacity .6s ease;
+}
+
+.portfolio-swiper .swiper-slide .portfolio-card{
+  transform:scale(.8);
+  opacity:.6;
+  transition:transform .6s ease, opacity .6s ease;
+}
+
+.portfolio-swiper .swiper-slide-active .portfolio-card{
+  transform:scale(1);
+  opacity:1;
+}
+
+.portfolio-swiper .swiper-slide-prev .portfolio-card,
+.portfolio-swiper .swiper-slide-next .portfolio-card{
+  transform:scale(.85);
+  opacity:.9;
+}
+
+/* =========================
+   NAV BUTTONS
+========================= */
+.nav-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  border:none;
+  background:#fff;
+  color:#3b2416;
+  font-size:24px;
+  cursor:pointer;
+  z-index:20;
+  box-shadow:0 10px 25px rgba(59,36,22,.25);
+  transition:.3s;
+}
+
+.nav-btn:hover{
+  background:#3b2416;
+  color:#fff;
+}
+
+.prevBtn{ left:-70px; }
+.nextBtn{ right:-70px; }
+
+/* =========================
+   PAGINATION
+========================= */
+.custom-pagination{
+  margin-top:25px;
+}
+
+.custom-pagination .swiper-pagination-bullet{
+  width:11px;
+  height:11px;
+  background:#d6c2b2;
+  opacity:1;
+}
+
+.custom-pagination .swiper-pagination-bullet-active{
+  background:#a46a3f;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width:1100px){
+  .prevBtn{ left:-40px }
+  .nextBtn{ right:-40px }
+}
+
+@media (max-width:768px){
+  .prevBtn{ left:0px }
+  .nextBtn{ right:0px }
+}

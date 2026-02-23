@@ -1,0 +1,131 @@
+.process-section {
+  padding: 90px 20px;
+  text-align: center;
+  font-family: sans-serif;
+
+  background-image: url("../assets/BgImages/Proccess.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.process-title {
+  font-size: 30px;
+  margin-bottom: 70px;
+  font-weight: 600;
+}
+
+/* timeline */
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  flex-wrap: wrap;
+}
+
+/* SVG curve */
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  transform: translateY(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.curve-path {
+  fill: none;
+  stroke: url(#curveGradient);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+/* circle */
+.circle {
+  position: relative;
+  z-index: 2;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px dashed #d7d7d7;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 25px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.circle:hover {
+  transform: translateY(-10px);
+}
+
+/* icon */
+.icon {
+  font-size: 30px;
+  color: #333;
+}
+
+/* title */
+.circle h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* desc */
+.circle p {
+  margin: 0;
+  font-size: 13px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* number badge */
+.badge {
+  position: absolute;
+  bottom: -18px;
+  right: 50%;
+  transform: translateX(50%);
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  background: linear-gradient(45deg, #25c4ff, #7a48ff);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+
+  .timeline {
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+}
