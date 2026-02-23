@@ -1,5 +1,5 @@
 import "./Home.css";
-import BackegroundVideo from "../assets/BackgroundVideo.mp4";
+import BackegroundVideo from "../assets/Backgroundvideo.mp4";
 import WhyChooseUs from "../components/WhyChooseUs";
 import { useNavigate } from "react-router-dom";
 import { FaWhatsapp, } from "react-icons/fa";
