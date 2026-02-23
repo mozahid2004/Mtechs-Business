@@ -21,15 +21,21 @@ function App() {
   const isAdminRoute = location.pathname.startsWith("/admin");
 
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
+    const finishLoading = () => setLoading(false);
+
+    if (document.readyState === "complete") {
+      finishLoading();
+    } else {
+      window.addEventListener("load", finishLoading);
+    }
+
+    const timer = setTimeout(finishLoading, 2000);
+
+    return () => {
+      window.removeEventListener("load", finishLoading);
+      clearTimeout(timer);
     };
-
-    window.addEventListener("load", handleLoad);
-
-    return () => window.removeEventListener("load", handleLoad);
   }, []);
 
   return (
