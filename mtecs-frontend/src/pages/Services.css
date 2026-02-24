@@ -11,7 +11,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../assets/BgImages/SideBg.jpg") no-repeat left / contain;
+  background: url("../assets/BgImages/SideBg.webp") no-repeat left / contain;
   opacity: 0.45;
   z-index: 0;
 }

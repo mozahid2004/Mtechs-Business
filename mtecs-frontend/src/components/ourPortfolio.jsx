@@ -4,9 +4,9 @@ import "./ourPortfolio.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-import Portfolio from "../assets/ProjectImg/Portfolio.png"
-import Vaidyaaz from "../assets/ProjectImg/Vaidyaaz.png"
-import Academy from "../assets/ProjectImg/Academy.png"
+import Portfolio from "../assets/ProjectImg/Portfolio.webp"
+import Vaidyaaz from "../assets/ProjectImg/Vaidyaaz.webp"
+import Academy from "../assets/ProjectImg/Academy.webp"
 
 
 

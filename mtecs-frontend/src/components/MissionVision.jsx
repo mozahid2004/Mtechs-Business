@@ -1,7 +1,7 @@
 import React from "react";
 import { FaBullseye, FaCogs } from "react-icons/fa";
 import "./MissionVision.css";
-import MissionImg from "../assets/BgImages/missionBanner.jpg"
+import MissionImg from "../assets/BgImages/missionBanner.webp"
 
 function MissionVision() {
   return (
